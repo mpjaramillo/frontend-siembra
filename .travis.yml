@@ -9,7 +9,6 @@ after_success:
   - docker push $DOCKER_USER/frontsiembra:$TRAVIS_BUILD_NUMBER
   - docker tag frontsiembra $DOCKER_USER/frontsiembra:latest
   - docker push $DOCKER_USER/frontsiembra:latest
-
   deploy:
   provider: heroku
   api_key: 
