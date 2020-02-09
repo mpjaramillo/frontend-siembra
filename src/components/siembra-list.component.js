@@ -13,7 +13,7 @@ export default class SiembraList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:4000/siembras/')
+    axios.get('https://microservice-siembra.herokuapp.com/siembras/')
       .then(res => {
         this.setState({
           siembras: res.data

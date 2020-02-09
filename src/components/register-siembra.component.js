@@ -48,7 +48,7 @@ export default class RegisterSiembra extends Component {
       fecha: this.state.fecha,
       especie: this.state.especie,
     };
-    axios.post('http://localhost:4000/siembras/register-siembra', siembraObject)
+    axios.post('https://microservice-siembra.herokuapp.com/siembras/register-siembra', siembraObject)
       .then(res => console.log(res.data));
 
     this.setState({ agricultor: '', parcela: '', fecha: '',fecha:'',especie:'' })
