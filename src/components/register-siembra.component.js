@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 
+
 export default class RegisterSiembra extends Component {
   constructor(props) {
     super(props)
@@ -66,9 +67,11 @@ export default class RegisterSiembra extends Component {
           <Form.Control type="text" value={this.state.parcela} onChange={this.onChangeParcelaDetails}/>
         </Form.Group>
 
+
+        
         <Form.Group controlId="Name">
           <Form.Label>Fecha</Form.Label>
-          <Form.Control type="text" value={this.state.fecha} onChange={this.onChangeDateS}/>
+          <Form.Control type="date" value={this.state.fecha} onChange={this.onChangeDateS}/>
         </Form.Group>
 
 
