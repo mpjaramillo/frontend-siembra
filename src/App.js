@@ -20,7 +20,7 @@ function App() {
           <Container>
 
             <Navbar.Brand>
-              <Link to={"/register-siembra"} className="nav-link">
+              <Link to={"/register-siembra"} className="nav-link" variant="dark">
                 Cursos
               </Link>
             </Navbar.Brand>
