@@ -36,10 +36,10 @@ export default class SiembraList extends Component {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>Agricultor</th>
-            <th>Parcela</th>
-            <th>Fecha</th>
-	    <th>Especie</th>
+            <th>Nombre</th>
+            <th>Docente</th>
+            <th>Horas</th>
+	          <th>Area</th>
           </tr>
         </thead>
         <tbody>

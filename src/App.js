@@ -21,20 +21,20 @@ function App() {
 
             <Navbar.Brand>
               <Link to={"/register-siembra"} className="nav-link">
-                Coffee Track
+                Cursos
               </Link>
             </Navbar.Brand>
 
             <Nav className="justify-content-end">
               <Nav>
                 <Link to={"/register-siembra"} className="nav-link">
-                  Registro de Siembra
+                  Registro de Curso
                 </Link>
               </Nav>
 
               <Nav>
                 <Link to={"/siembra-list"} className="nav-link">
-                  Listado de siembras
+                  Listado de curso
                 </Link>
               </Nav>
             </Nav>

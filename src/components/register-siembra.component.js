@@ -9,75 +9,75 @@ export default class RegisterSiembra extends Component {
     super(props)
 
     // Setting up functions
-    this.onChangeAgricultorName = this.onChangeAgricultorName.bind(this);
-    this.onChangeParcelaDetails = this.onChangeParcelaDetails.bind(this);
-    this.onChangeDateS = this.onChangeDateS.bind(this);
-    this.onChangeSpecieInfo = this.onChangeSpecieInfo.bind(this);
+    this.onChangeNombreName = this.onChangeNombreName.bind(this);
+    this.onChangeDocenteDetails = this.onChangeDocenteDetails.bind(this);
+    this.onChangeHorasS = this.onChangeHorasS.bind(this);
+    this.onChangeAreaInfo = this.onChangeAreaInfo.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     // Setting up state
     this.state = {
-      agricultor: '',
-      parcela: '',
-      fecha: '',
-      especie: ''
+      nombre: '',
+      docente: '',
+      horas: '',
+      area: ''
     }
   }
 
-  onChangeAgricultorName(e) {
-    this.setState({agricultor: e.target.value})
+  onChangeNombreName(e) {
+    this.setState({nombre: e.target.value})
   }
 
-  onChangeParcelaDetails(e) {
-    this.setState({parcela: e.target.value})
+  onChangeDocenteDetails(e) {
+    this.setState({docente: e.target.value})
   }
 
-  onChangeDateS(e) {
-    this.setState({fecha: e.target.value})
+  onChangeHorasS(e) {
+    this.setState({horas: e.target.value})
   }
 
-  onChangeSpecieInfo(e) {
-    this.setState({especie: e.target.value})
+  onChangeAreaInfo(e) {
+    this.setState({area: e.target.value})
   }
 
   onSubmit(e) {
     e.preventDefault()
 
     const siembraObject = {
-      agricultor: this.state.agricultor,
-      parcela: this.state.parcela,
-      fecha: this.state.fecha,
-      especie: this.state.especie,
+      nombre: this.state.nombre,
+      docente: this.state.docente,
+      horas: this.state.horas,
+      area: this.state.area,
     };
-    axios.post('https://microservice-siembra.herokuapp.com/siembras/register-siembra', siembraObject)
+    axios.post('https://microservicio-registrocurso.herokuapp.com/', siembraObject)
       .then(res => console.log(res.data));
 
-    this.setState({ agricultor: '', parcela: '', fecha: '',fecha:'',especie:'' })
+    this.setState({ nombre: '', docente: '', horas: '',horas:'',area:'' })
   }
   render() {
     return (<div className="form-wrapper">
       <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="Name">
-          <Form.Label>Agricultor</Form.Label>
-          <Form.Control type="text" value={this.state.agricultor} onChange={this.onChangeAgricultorName}/>
+          <Form.Label>Nombre</Form.Label>
+          <Form.Control type="text" value={this.state.nombre} onChange={this.onChangeNombreName}/>
         </Form.Group>
 
         <Form.Group controlId="Name">
-          <Form.Label>Parcela</Form.Label>
-          <Form.Control type="text" value={this.state.parcela} onChange={this.onChangeParcelaDetails}/>
+          <Form.Label>Docente</Form.Label>
+          <Form.Control type="text" value={this.state.docente} onChange={this.onChangeDocenteDetails}/>
         </Form.Group>
 
 
-        
+
         <Form.Group controlId="Name">
-          <Form.Label>Fecha</Form.Label>
-          <Form.Control type="date" value={this.state.fecha} onChange={this.onChangeDateS}/>
+          <Form.Label>Horas</Form.Label>
+          <Form.Control type="text" value={this.state.horas} onChange={this.onChangeHorasS}/>
         </Form.Group>
 
 
         <Form.Group controlId="Name">
-          <Form.Label>Especie</Form.Label>
-          <Form.Control type="text" value={this.state.especie} onChange={this.onChangeSpecieInfo}/>
+          <Form.Label>Area</Form.Label>
+          <Form.Control type="text" value={this.state.area} onChange={this.onChangeAreaInfo}/>
         </Form.Group>
 
         <Button variant="danger" size="lg" block="block" type="submit">
