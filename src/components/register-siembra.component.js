@@ -49,7 +49,7 @@ export default class RegisterSiembra extends Component {
       horas: this.state.horas,
       area: this.state.area,
     };
-    axios.post('https://microservicio-registrocurso.herokuapp.com/register-siembra', siembraObject)
+    axios.post('https://microservicio-registrocurso.herokuapp.com/siembras/register-siembra', siembraObject)
       .then(res => console.log(res.data));
 
     this.setState({ nombre: '', docente: '', horas: '',area:'' })
@@ -66,8 +66,6 @@ export default class RegisterSiembra extends Component {
           <Form.Label>Docente</Form.Label>
           <Form.Control type="text" value={this.state.docente} onChange={this.onChangeDocenteDetails}/>
         </Form.Group>
-
-
 
         <Form.Group controlId="formGroupHoras">
           <Form.Label>Horas</Form.Label>

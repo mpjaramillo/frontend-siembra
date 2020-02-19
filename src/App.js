@@ -16,10 +16,10 @@ function App() {
   return (<Router>
     <div className="App">
       <header className="App-header">
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="secondary" variant="dark">
           <Container>
 
-            <Navbar.Brand variant="dark">
+            <Navbar.Brand>
               <Link to={"/register-siembra"} className="nav-link" >
                 Cursos
               </Link>
