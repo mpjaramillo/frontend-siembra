@@ -13,7 +13,7 @@ export default class SiembraList extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://microservice-siembra.herokuapp.com/siembras/')
+    axios.get('https://microservicio-registrocurso.herokuapp.com/siembras/')
       .then(res => {
         this.setState({
           siembras: res.data
@@ -39,7 +39,7 @@ export default class SiembraList extends Component {
             <th>Nombre</th>
             <th>Docente</th>
             <th>Horas</th>
-	          <th>Area</th>
+	          <th>Área</th>
           </tr>
         </thead>
         <tbody>
