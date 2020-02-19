@@ -16,7 +16,7 @@ function App() {
   return (<Router>
     <div className="App">
       <header className="App-header">
-        <Navbar bg="primary" variant="dark">
+        <Navbar bg="primary" variant="primary">
           <Container>
 
             <Navbar.Brand>
