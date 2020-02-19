@@ -19,8 +19,8 @@ function App() {
         <Navbar bg="primary" variant="dark">
           <Container>
 
-            <Navbar.Brand>
-              <Link to={"/register-siembra"} className="nav-link" variant="dark">
+            <Navbar.Brand variant="dark">
+              <Link to={"/register-siembra"} className="nav-link" >
                 Cursos
               </Link>
             </Navbar.Brand>
